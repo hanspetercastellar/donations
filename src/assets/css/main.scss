@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap');
+
+$primaryFrom: #74EDE6;
+$primaryTo: #9FC3F9;
+
+$color1: #EE8F00;
+$color2: #50D98B;
+$color3: #00C0F5;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  font-size: 16px;
+}
+
+.App {
+  .container {
+    .header {
+      margin-bottom: 4.75rem;
+      display: flex;
+      justify-content: center;
+      border-width: 0px 0px 1px 0px;
+      border-style: solid;
+      border-image: linear-gradient(to left, #EE8F00, #50D98B, #00C0F5) 1 10%;
+      padding: 2.625rem;
+
+      .logo {
+        width: 6.25rem;
+        height: 3.75rem;
+
+      }
+    }
+
+    .content-page {
+      display: flex;
+
+      .lists {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 1.25rem;
+        width: 100%;
+
+        .cardItem {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1.875rem;
+          border-radius: 15px;
+          background: transparent;
+          border: 1px solid transparent;
+          border-image: linear-gradient(to left, #EE8F00, #50D98B, #00C0F5) 1 10%;
+          min-height: 9.375rem;
+
+          .part-left {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 60%;
+
+            .avatar {
+
+              background-color: #00C0F5;
+              width: 120px;
+              height: 120px;
+              position: relative;
+              overflow: hidden;
+              border-radius: 50%;
+
+              img {
+                display: inline;
+                margin: 0 auto;
+                width:100%;
+                height:100%;
+                object-fit:cover;
+              }
+            }
+
+            .name {
+              color: white;
+              font-size: 2.5rem;
+              line-height: 44px;
+              width: 71%;
+            }
+          }
+
+          .part-rigth {
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 30%;
+
+            .donation-d {
+              .goIcon {
+                background: linear-gradient(
+                                90deg
+                        , #74EDE6 0%, #9FC3F9 100%) !important;
+                color: black;
+              }
+
+              > p {
+                font-size: 1.25rem;
+                line-height: 0;
+              }
+
+              > span {
+                line-height: 0.6;
+                font-size: 2.5rem;
+              }
+            }
+          }
+
+        }
+      }
+    }
+
+
+  }
+
+}
+
+.principalTitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3.2rem;
+  line-height: 40px;
+  background: -webkit-linear-gradient($primaryFrom, $primaryTo);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
