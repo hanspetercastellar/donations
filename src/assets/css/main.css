@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap");
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: black;
+  font-family: "Poppins", sans-serif !important;
+  background-color: black !important;
   font-size: 16px;
 }
 
+.App {
+  padding-bottom: 150px;
+}
 .App .container .header {
+  position: relative;
   margin-bottom: 4.75rem;
   display: flex;
   justify-content: center;
@@ -17,6 +21,11 @@ body {
 .App .container .header .logo {
   width: 6.25rem;
   height: 3.75rem;
+}
+.App .container .header .backButton {
+  color: white;
+  position: absolute;
+  left: 0;
 }
 .App .container .content-page {
   display: flex;
@@ -31,18 +40,45 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.875rem;
-  border-radius: 15px;
-  background: transparent;
+  position: relative;
   border: 1px solid transparent;
-  border-image: linear-gradient(to left, #EE8F00, #50D98B, #00C0F5) 1 10%;
-  min-height: 9.375rem;
+  border-radius: 16px;
+  background: black;
+  background-clip: padding-box;
+  padding: 15px;
+}
+@media (max-width: 700px) {
+  .App .container .content-page .lists .cardItem {
+    flex-direction: column;
+  }
+}
+@media (max-width: 700px) {
+  .App .container .content-page .lists .cardItem .divider-oculto {
+    display: block !important;
+  }
+}
+.App .container .content-page .lists .cardItem:after {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  background: linear-gradient(to left, #EE8F00, #50D98B, #00C0F5);
+  content: "";
+  z-index: -1;
+  border-radius: 16px;
 }
 .App .container .content-page .lists .cardItem .part-left {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 60%;
+}
+@media (max-width: 700px) {
+  .App .container .content-page .lists .cardItem .part-left {
+    width: 100%;
+    margin-bottom: 25px;
+  }
 }
 .App .container .content-page .lists .cardItem .part-left .avatar {
   background-color: #00C0F5;
@@ -51,6 +87,13 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 50%;
+}
+@media (max-width: 700px) {
+  .App .container .content-page .lists .cardItem .part-left .avatar {
+    flex-direction: column;
+    width: 70px;
+    height: 70px;
+  }
 }
 .App .container .content-page .lists .cardItem .part-left .avatar img {
   display: inline;
@@ -73,7 +116,13 @@ body {
   align-items: center;
   width: 30%;
 }
-.App .container .content-page .lists .cardItem .part-rigth .donation-d .goIcon {
+@media (max-width: 700px) {
+  .App .container .content-page .lists .cardItem .part-rigth {
+    width: 100%;
+    margin: 30px 0 0 0px;
+  }
+}
+.App .container .content-page .lists .cardItem .part-rigth .goIcon {
   background: linear-gradient(90deg, #74EDE6 0%, #9FC3F9 100%) !important;
   color: black;
 }
@@ -84,6 +133,41 @@ body {
 .App .container .content-page .lists .cardItem .part-rigth .donation-d > span {
   line-height: 0.6;
   font-size: 2.5rem;
+}
+.App .header-main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.App .header-main select {
+  width: 40%;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+.App .main-footer {
+  margin-top: 38px;
+  display: flex;
+  justify-content: center;
+}
+.App .main-footer .content-btm {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 700px) {
+  .App .main-footer .content-btm {
+    width: 30%;
+  }
+}
+.App .main-footer .content-btm button {
+  font-weight: bold;
+  color: #9FC3F9;
+  width: 45%;
+  border-radius: 20px;
+  background-color: black;
+  font-size: 12px;
+  border-color: #00C0F5;
 }
 
 .principalTitle {

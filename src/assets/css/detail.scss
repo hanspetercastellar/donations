@@ -1,0 +1,218 @@
+$primaryFrom: #74EDE6;
+$primaryTo: #9FC3F9;
+
+$color1: #EE8F00;
+$color2: #50D98B;
+$color3: #00C0F5;
+.goIcon {
+  background: linear-gradient(
+                  90deg, #74EDE6 0%, #9FC3F9 100%) !important;
+  color: black !important;
+}
+
+.content-page-detail {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    margin-top: 0px;
+  }
+
+  .avatar-content {
+    background-color: #9FC3F9;
+    border-radius: 83px;
+    padding: 24px;
+    margin: 50px 0;
+  }
+
+  .description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 45px;
+    width: 50%;
+    color: #B2B2B2;
+    text-align: center;
+  }
+
+  .card-total {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    background: black;
+    background-clip: padding-box;
+    padding: 28px 24px;
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+
+    &:after {
+      position: absolute;
+      top: -1px;
+      bottom: -1px;
+      left: -1px;
+      right: -1px;
+      background: linear-gradient(to left, #EE8F00, #50D98B, #00C0F5);
+      content: '';
+      z-index: -1;
+      border-radius: 16px;
+    }
+
+    .divider-oculto {
+      @media (max-width: 700px) {
+        display: block !important;
+        margin: 15px 0;
+      }
+    }
+
+    .total-detail {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      text-align: left;
+      padding: 10px 20px;
+      width: 100%;
+      font-weight: bold;
+
+      .goIcon {
+        background: linear-gradient(
+                        90deg, #74EDE6 0%, #9FC3F9 100%) !important;
+        color: black;
+      }
+
+      > p {
+
+        line-height: 0;
+      }
+
+      > span {
+        line-height: 0.6;
+        font-size: 2.5rem;
+      }
+    }
+
+    &.btn-custom {
+      margin-top: 40px;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      color: $primaryTo;
+      text-align: center !important;
+      width: 376px !important;
+
+      &:after {
+        background: linear-gradient(to left, #74EDE6, #9FC3F9) !important;
+
+      }
+    }
+  }
+}
+
+
+.modal-content {
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background: black;
+  background-clip: padding-box;
+  position: relative;
+
+  .modal-header {
+    border-bottom: none;
+    justify-content: center !important;
+
+    .modal-title {
+      color: $primaryTo;
+      font-weight: bold;
+      justify-content: center !important;
+    }
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .subtitle {
+      color: #B2B2B2;
+    }
+
+    .input-amount {
+      position: relative;
+      border: 1px solid #666666;
+      border-radius: 15px;
+      background: black;
+      background-clip: padding-box;
+      color: #ffffff;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-align: center;
+
+      &::placeholder {
+        color: #B2B2B2;
+        letter-spacing: normal;
+        font-weight: bold;
+      }
+    }
+
+
+  }
+
+  &:after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    background: linear-gradient(to left, #EE8F00, #50D98B, #00C0F5);
+    content: '';
+    z-index: -1;
+    border-radius: 16px;
+  }
+
+  .modal-footer {
+    border-top: none;
+    justify-content: center !important;
+    padding-bottom: 20px;
+
+    button {
+      border: 1px solid $primaryTo;
+      border-radius: 15px;
+      text-transform: uppercase;
+      color: #9FC3F9;
+      font-weight: bold;
+      padding: 15px;
+      width: 50%;
+      @media (max-width: 700px) {
+        width: 70%;
+      }
+    }
+  }
+}
+
+.borderGradient {
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: black;
+  background-clip: padding-box;
+
+  &:after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    background: linear-gradient(to left, #EE8F00, #50D98B, #00C0F5);
+    content: '';
+    z-index: -1;
+    border-radius: 5px;
+  }
+}

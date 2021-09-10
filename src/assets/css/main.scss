@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap');
 
+
 $primaryFrom: #74EDE6;
 $primaryTo: #9FC3F9;
 
@@ -8,14 +9,18 @@ $color2: #50D98B;
 $color3: #00C0F5;
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: black;
+  font-family: 'Poppins', sans-serif !important;
+  background-color: black !important;
   font-size: 16px;
 }
 
 .App {
+  padding-bottom: 150px;
+
+
   .container {
     .header {
+      position: relative;
       margin-bottom: 4.75rem;
       display: flex;
       justify-content: center;
@@ -28,6 +33,12 @@ body {
         width: 6.25rem;
         height: 3.75rem;
 
+      }
+
+      .backButton {
+        color: white;
+        position: absolute;
+        left: 0;
       }
     }
 
@@ -44,19 +55,44 @@ body {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 1.875rem;
-          border-radius: 15px;
-          background: transparent;
+          position: relative;
           border: 1px solid transparent;
-          border-image: linear-gradient(to left, #EE8F00, #50D98B, #00C0F5) 1 10%;
-          min-height: 9.375rem;
+          border-radius: 16px;
+          background: black;
+          background-clip: padding-box;
+          padding: 15px;
+
+          @media (max-width: 700px) {
+            flex-direction: column;
+
+          }
+          .divider-oculto{
+            @media (max-width: 700px) {
+              display:block !important;
+
+            }
+          }
+          &:after {
+            position: absolute;
+            top: -1px;
+            bottom: -1px;
+            left: -1px;
+            right: -1px;
+            background: linear-gradient(to left, #EE8F00, #50D98B, #00C0F5);
+            content: '';
+            z-index: -1;
+            border-radius: 16px;
+          }
 
           .part-left {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 60%;
-
+            @media (max-width: 700px) {
+              width: 100%;
+              margin-bottom: 25px;
+            }
             .avatar {
 
               background-color: #00C0F5;
@@ -65,13 +101,17 @@ body {
               position: relative;
               overflow: hidden;
               border-radius: 50%;
-
+              @media (max-width: 700px) {
+                flex-direction: column;
+                width: 70px;
+                height: 70px;
+              }
               img {
                 display: inline;
                 margin: 0 auto;
-                width:100%;
-                height:100%;
-                object-fit:cover;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
               }
             }
 
@@ -90,14 +130,17 @@ body {
             justify-content: space-between;
             align-items: center;
             width: 30%;
+            @media (max-width: 700px) {
+              width: 100%;
+              margin: 30px 0 0 0px;
+            }
+            .goIcon {
+              background: linear-gradient(
+                              90deg, #74EDE6 0%, #9FC3F9 100%) !important;
+              color: black;
+            }
 
             .donation-d {
-              .goIcon {
-                background: linear-gradient(
-                                90deg
-                        , #74EDE6 0%, #9FC3F9 100%) !important;
-                color: black;
-              }
 
               > p {
                 font-size: 1.25rem;
@@ -115,9 +158,40 @@ body {
       }
     }
 
-
   }
-
+  .header-main{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    select{
+      width: 40%;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+    }
+  }
+  .main-footer {
+    margin-top: 38px;
+    display: flex;
+    justify-content: center;
+    .content-btm{
+      width: 20%;
+      display: flex;
+      justify-content: space-around;
+      @media (max-width: 700px) {
+        width: 30%;
+      }
+      button{
+        font-weight: bold;
+        color: $primaryTo;
+        width: 45%;
+        border-radius: 20px;
+        background-color: black;
+        font-size: 12px;
+        border-color: #00C0F5;
+      }
+    }
+  }
 }
 
 .principalTitle {

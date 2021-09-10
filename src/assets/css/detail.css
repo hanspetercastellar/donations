@@ -1,0 +1,188 @@
+.goIcon {
+  background: linear-gradient(90deg, #74EDE6 0%, #9FC3F9 100%) !important;
+  color: black !important;
+}
+
+.content-page-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content-page-detail .title {
+  margin-top: 0px;
+}
+.content-page-detail .avatar-content {
+  background-color: #9FC3F9;
+  border-radius: 83px;
+  padding: 24px;
+  margin: 50px 0;
+}
+.content-page-detail .description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 45px;
+  width: 50%;
+  color: #B2B2B2;
+  text-align: center;
+}
+.content-page-detail .card-total {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background: black;
+  background-clip: padding-box;
+  padding: 28px 24px;
+}
+@media (max-width: 700px) {
+  .content-page-detail .card-total {
+    flex-direction: column;
+  }
+}
+.content-page-detail .card-total:after {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  background: linear-gradient(to left, #EE8F00, #50D98B, #00C0F5);
+  content: "";
+  z-index: -1;
+  border-radius: 16px;
+}
+@media (max-width: 700px) {
+  .content-page-detail .card-total .divider-oculto {
+    display: block !important;
+    margin: 15px 0;
+  }
+}
+.content-page-detail .card-total .total-detail {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: left;
+  padding: 10px 20px;
+  width: 100%;
+  font-weight: bold;
+}
+.content-page-detail .card-total .total-detail .goIcon {
+  background: linear-gradient(90deg, #74EDE6 0%, #9FC3F9 100%) !important;
+  color: black;
+}
+.content-page-detail .card-total .total-detail > p {
+  line-height: 0;
+}
+.content-page-detail .card-total .total-detail > span {
+  line-height: 0.6;
+  font-size: 2.5rem;
+}
+.content-page-detail .card-total.btn-custom {
+  margin-top: 40px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  color: #9FC3F9;
+  text-align: center !important;
+  width: 376px !important;
+}
+.content-page-detail .card-total.btn-custom:after {
+  background: linear-gradient(to left, #74EDE6, #9FC3F9) !important;
+}
+
+.modal-content {
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background: black;
+  background-clip: padding-box;
+  position: relative;
+}
+.modal-content .modal-header {
+  border-bottom: none;
+  justify-content: center !important;
+}
+.modal-content .modal-header .modal-title {
+  color: #9FC3F9;
+  font-weight: bold;
+  justify-content: center !important;
+}
+.modal-content .modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content .modal-body .subtitle {
+  color: #B2B2B2;
+}
+.modal-content .modal-body .input-amount {
+  position: relative;
+  border: 1px solid #666666;
+  border-radius: 15px;
+  background: black;
+  background-clip: padding-box;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.modal-content .modal-body .input-amount::placeholder {
+  color: #B2B2B2;
+  letter-spacing: normal;
+  font-weight: bold;
+}
+.modal-content:after {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  background: linear-gradient(to left, #EE8F00, #50D98B, #00C0F5);
+  content: "";
+  z-index: -1;
+  border-radius: 16px;
+}
+.modal-content .modal-footer {
+  border-top: none;
+  justify-content: center !important;
+  padding-bottom: 20px;
+}
+.modal-content .modal-footer button {
+  border: 1px solid #9FC3F9;
+  border-radius: 15px;
+  text-transform: uppercase;
+  color: #9FC3F9;
+  font-weight: bold;
+  padding: 15px;
+  width: 50%;
+}
+@media (max-width: 700px) {
+  .modal-content .modal-footer button {
+    width: 70%;
+  }
+}
+
+.borderGradient {
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: black;
+  background-clip: padding-box;
+}
+.borderGradient:after {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  background: linear-gradient(to left, #EE8F00, #50D98B, #00C0F5);
+  content: "";
+  z-index: -1;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=detail.css.map */

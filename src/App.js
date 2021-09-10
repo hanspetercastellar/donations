@@ -1,5 +1,6 @@
 import './assets/css/main.css'
 import HeaderComponent from "./components/header";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
     BrowserRouter as Router,
     Switch,
@@ -10,6 +11,7 @@ import DonationsPage from "./pages/donationsPage";
 import {Container} from "@material-ui/core";
 import {Provider} from "react-redux";
 import store from "./redux/store";
+import DonationDetailPage from "./pages/donationDetailPage";
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
                   <Container maxWidth="md" className={'container'}>
                       <Switch>
                           <Route exact path="/" component={DonationsPage}/>
+                          <Route  path="/detail" component={DonationDetailPage}/>
                       </Switch>
                   </Container>
 
